@@ -1,0 +1,51 @@
+@import '~antd/lib/style/themes/default.less';
+
+.layout-page {
+  height: 100%;
+  &-header {
+    padding: 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 9;
+    background-color: #fff !important;
+    box-shadow: 0 4px 10px #ddd;
+    &-main {
+      padding: 0 15px;
+      flex: 1;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    .logo {
+      height: 64px;
+      width: 200px;
+      box-sizing: border-box;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      z-index: 9;
+      img {
+        width: 30px;
+        height: 30px;
+      }
+    }
+  }
+  &-content {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+    > :nth-child(1) :global(.ant-tabs-bar) {
+      // padding: 6px 0 0;
+      background: #fff;
+    }
+    > :nth-child(2) {
+      flex: auto;
+      overflow-y: auto;
+      // margin: 12px;
+      margin: @basic-layout-pagechildren-content-margin;
+      box-sizing: border-box;
+      background-color: #fff;
+    }
+  }
+}

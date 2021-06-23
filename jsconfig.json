@@ -1,0 +1,20 @@
+{
+  "compilerOptions": {
+    "emitDecoratorMetadata": true,
+    "experimentalDecorators": true,
+    "baseUrl": ".",
+    "paths": {
+      "@@/*": ["src/.umi/*"],
+      "@/*": ["./src/*"],
+      "services/*": ["./src/services/*"],
+      "models/*": ["./src/models/*"],
+      "utils/*": ["./src/utils/*"],
+      "config/*": ["./src/config/*"],
+      "pages/*": ["./src/pages/*"],
+      "components/*": ["./src/components/*"],
+      "assets/*": ["./src/assets/*"],
+      "APP_ROOT/*": ["./*"]
+    },
+    "lib": ["esnext", "dom"]
+  }
+}

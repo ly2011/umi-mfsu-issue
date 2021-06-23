@@ -1,0 +1,134 @@
+/*滚动条设置，仅对chrome生效*/
+/*定义滚动条高宽及背景 高宽分别对应横竖滚动条的尺寸*/
+::-webkit-scrollbar {
+  /*滚动条整体样式*/
+  width: 8px; /*高宽分别对应横竖滚动条的尺寸*/
+  height: 8px;
+  background: #f5f5f5;
+}
+/*定义滑块 内阴影+圆角*/
+::-webkit-scrollbar-thumb {
+  border-radius: 6px;
+  background: #ccc;
+}
+/*定义滚动条轨道 内阴影+圆角*/
+::-webkit-scrollbar-track {
+  border-radius: 6px;
+  background: #f5f5f5;
+}
+
+/* 去掉箭头 */
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+}
+input[type='number'] {
+  -moz-appearance: textfield;
+}
+
+// 改变Placeholder文字的颜色
+input::-moz-placeholder {
+  color: rgb(204, 204, 204);
+} //Firefox
+input::-webkit-input-placeholder {
+  color: rgb(204, 204, 204);
+} //Chrome,Safari
+input:-ms-input-placeholder {
+  color: rgb(204, 204, 204);
+} // ie
+textarea::-moz-placeholder {
+  color: rgb(204, 204, 204);
+} //Firefox
+textarea::-webkit-input-placeholder {
+  color: rgb(204, 204, 204);
+} //Chrome,Safari
+textarea:-ms-input-placeholder {
+  color: rgb(204, 204, 204);
+} // ie
+
+html,
+body,
+#root {
+  height: 100%;
+}
+
+body {
+  margin: 0;
+}
+
+// antd theme
+.ant-btn {
+  &.no-padding {
+    padding: 0;
+  }
+  &.ant-btn-link.text-link {
+    padding: 0;
+    height: auto;
+    border-radius: 0;
+  }
+}
+
+/* body.printing {
+  #root > .ant-layout {
+    & > .ant-layout-sider {
+      display: none;
+    }
+    & > .ant-layout {
+      & > .ant-layout-header {
+        display: none;
+      }
+      .ant-page-header {
+        display: none;
+      }
+      .ant-layout-footer {
+        display: none;
+      }
+    }
+  }
+} */
+
+// layout
+
+.ant-pro-page-content-wrap-tabs {
+  color: red;
+  &.ant-tabs {
+    .ant-tabs-bar {
+      .ant-tabs-tab {
+        border: none !important;
+        border-bottom: 1px solid transparent !important;
+      }
+      .ant-tabs-tab-active {
+        border-color: #1890ff !important;
+      }
+    }
+    &.ant-tabs-card {
+      .ant-tabs-card-bar {
+        .ant-tabs-tab {
+          background-color: #fff;
+        }
+      }
+    }
+    .ant-tabs-card-bar {
+      .ant-tabs-tab {
+        .ant-tabs-close-x {
+          visibility: hidden;
+          &:hover {
+            color: rgba(0, 0, 0, 0.85);
+          }
+        }
+        &:hover {
+          .ant-tabs-close-x {
+            visibility: visible;
+          }
+        }
+      }
+    }
+  }
+}
+
+// 表格样式
+.ant-table {
+  .ant-table-thead > tr > th .ant-table-header-column {
+    display: block;
+  }
+}
